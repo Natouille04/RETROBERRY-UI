@@ -80,7 +80,7 @@ app.get('/api/systems/:parametre/games/:gameid/media/marquee', async (req, res) 
     console.log(`🔍 Requête vers ${BATOCERA_API}/${parametre}/games/${gameid}/media/marquee`);
 
     try {
-        const response = await axios.get(`${BATOCERA_API}/${parametre}/logo`, {
+        const response = await axios.get(`${BATOCERA_API}/${parametre}/games/${gameid}/media/marquee`, {
             responseType: 'arraybuffer', // Permet de récupérer le fichier binaire
         });
 
